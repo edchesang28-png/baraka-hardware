@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ \
+const upload = const upload = multer({
   storage: storage,
   limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
   fileFilter: (req, file, cb) => {
@@ -531,7 +531,7 @@ app.get('/', (req, res) => {
       contacts: '/api/contact',
       analytics: '/api/analytics/stats'
     }
-  });
+  });\az
 });
 
 // ========== SERVER START ==========
