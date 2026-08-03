@@ -48,11 +48,7 @@ const upload = multer({
 // ============ MONGODB CONNECTION ============
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/baraka-hardware';
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
-  console.log('✓ Connected to MongoDB');
+mongoose.connect(mongoURI).then(() => {  console.log('✓ Connected to MongoDB');
 }).catch(err => {
   console.log('MongoDB connection error (will use mock data):', err.message);
 });
